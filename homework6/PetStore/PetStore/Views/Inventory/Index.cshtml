@@ -14,8 +14,9 @@
             <img src="@item.petPicture" width="100" height="100"/>
         </td>
         <td>
-            <h3>@Html.DisplayFor(modelItem => item.petName)</h3><a href="Inventory/Details/@item.petID">View</a>
-            @Html.DisplayFor(modelItem => item.petDescription)
+            <h3>@Html.DisplayFor(modelItem => item.petName)</h3>
+            <p>@Html.DisplayFor(modelItem => item.petDescription)</p>
+            <p><a class="btn btn-default" href="Inventory/Details/@item.petID">More Info</a></p>
         </td>
     </tr>
 }
