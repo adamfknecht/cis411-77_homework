@@ -1,0 +1,23 @@
+﻿@model IEnumerable<PetStore.Models.Pet>
+
+@{
+    ViewBag.Title = "Pet Inventory";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img src="@item.petPicture" width="100" height="100"/>
+        </td>
+        <td>
+            <h3>@Html.DisplayFor(modelItem => item.petName)</h3><a href="Inventory/Details/@item.petID">View</a>
+            @Html.DisplayFor(modelItem => item.petDescription)
+        </td>
+    </tr>
+}
+
+</table>
